@@ -15,10 +15,11 @@
             wordList[x] = infile.next();
          }         
          infile.close();
-         
+          //still need code for adding and deleting
+         // scans pantry for food
          while(true)
          {
-            String myWord = JOptionPane.showInputDialog("Word? (Type -1 to quit:)");
+            String myWord = JOptionPane.showInputDialog("Type in your ingredient. (Type -1 to exit):");
             if(myWord.equals("-1"))
             {
                System.out.println("Good-bye.");
@@ -30,7 +31,7 @@
                {
                   if(wordList[x].equals(myWord))
                   {
-                     System.out.println("Yes, " + myWord + " is a word, #" + x + 1 + ".");
+                     System.out.println("You have, " + myWord + " in your pantry. Yay!! It is item number" + x + 1 + ".");
                      s = 0;
                      break;
                   }                  
@@ -42,7 +43,7 @@
                //if (x == (wordList.length - 1))
                if (s == 1)
                {
-                      System.out.println("Sorry, " + myWord + " is not a word.");
+                      System.out.println("Sorry, " + myWord + " is not an item in your pantry currently.");
                }
             }
          }
